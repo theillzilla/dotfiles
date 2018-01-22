@@ -1,0 +1,8 @@
+{
+	"messages": [
+		"Can't find Chrome - install it or set the \"runtimeExecutable\" field in the launch config."
+	],
+	"keys": [
+		"attribute.chrome.missing"
+	]
+}

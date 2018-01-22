@@ -1,0 +1,107 @@
+{
+	"name": "prettier-standard-vscode",
+	"displayName": "Prettier-Standard - JavaScript formatter",
+	"description": "VS Code plugin for prettier + standard",
+	"version": "0.3.0",
+	"publisher": "numso",
+	"author": "Dallin Osmun <@dallinosmun>",
+	"galleryBanner": {
+		"color": "#ffe04b",
+		"theme": "light"
+	},
+	"homepage": "https://marketplace.visualstudio.com/items?itemName=numso.prettier-standard-vscode",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/numso/prettier-standard-vscode.git"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/numso/prettier-standard-vscode/issues"
+	},
+	"engines": {
+		"vscode": "^1.5.0"
+	},
+	"categories": [
+		"Formatters"
+	],
+	"activationEvents": [
+		"onLanguage:javascript",
+		"onLanguage:javascriptreact"
+	],
+	"main": "./out/src/extension",
+	"contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "Prettier-Standard - JavaScript formatter configuration",
+			"properties": {
+				"prettier.printWidth": {
+					"type": "integer",
+					"default": 80,
+					"description": "Fit code within this line limit"
+				},
+				"prettier.tabWidth": {
+					"type": "integer",
+					"default": 2,
+					"description": "Number of spaces it should use per tab"
+				},
+				"prettier.singleQuote": {
+					"type": "boolean",
+					"default": true,
+					"description": "If true, will use single instead of double quotes"
+				},
+				"prettier.trailingComma": {
+					"type": "string",
+					"enum": [
+						"none",
+						"es5",
+						"all"
+					],
+					"default": "es5",
+					"description": "Controls the printing of trailing commas wherever possible"
+				},
+				"prettier.bracketSpacing": {
+					"type": "boolean",
+					"default": true,
+					"description": "Controls the printing of spaces inside object literals"
+				},
+				"prettier.jsxBracketSameLine": {
+					"type": "boolean",
+					"default": false,
+					"description": "If true, puts the `>` of a multi-line jsx element at the end of the last line instead of being alone on the next line"
+				},
+				"prettier.parser": {
+					"type": "string",
+					"enum": [
+						"babylon",
+						"flow"
+					],
+					"default": "babylon",
+					"description": "Which parser to use. Valid options are 'flow' and 'babylon'"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "tsc -p ./",
+		"compile": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^2.0.3",
+		"vscode": "^1.0.0",
+		"mocha": "^2.3.3",
+		"@types/node": "^6.0.40",
+		"@types/mocha": "^2.2.32"
+	},
+	"dependencies": {
+		"babel-eslint": "7.2.2",
+		"prettier": "1.2.2",
+		"standard": "10.0.2"
+	},
+	"__metadata": {
+		"id": "945fe310-535c-4f65-b93d-b93d70401ab8",
+		"publisherId": "47645c15-4969-4123-9fe0-78953af30f9d",
+		"publisherDisplayName": "numso"
+	}
+}
