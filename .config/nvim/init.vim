@@ -12,7 +12,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdcommenter'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/seoul256.vim'
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -24,7 +23,7 @@ call plug#end()
 
 " colors
 syntax on
-color seoul256
+color dracula
 set termguicolors
 
 " line nums
