@@ -22,9 +22,9 @@ endif
 call plug#end()
 
 " colors
-syntax on
 color dracula
-set termguicolors
+" no longer necessary on current machine
+" set termguicolors
 
 " line nums
 :set number
@@ -67,6 +67,10 @@ let g:NERDTrimTrailingWhitespace = 1
 noremap <leader>ev :split $MYVIMRC<cr>
 map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
+
+" to avoid python issues
+" may have to brew install python first
+let g:python3_host_prog = "user/local/bin/python3"
 
 
 
