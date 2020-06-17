@@ -1,6 +1,10 @@
 " vim plug
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'preservim/nerdtree'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" then do language servers
+Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+
 Plug 'tpope/vim-surround'
 Plug 'mxw/vim-jsx'
 Plug 'jiangmiao/auto-pairs'
@@ -47,3 +51,6 @@ let g:python3_host_prog = "/usr/local/bin/python3"
 set nocompatible
 filetype plugin on
 syntax on
+
+"copy/paste
+v
