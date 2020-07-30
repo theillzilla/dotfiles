@@ -6,17 +6,17 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 
 Plug 'tpope/vim-surround'
-Plug 'mxw/vim-jsx'
 Plug 'jiangmiao/auto-pairs'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
-Plug 'junegunn/seoul256.vim'
+"Plug 'junegunn/seoul256.vim'
+Plug 'morhetz/gruvbox'
 Plug 'vimwiki/vimwiki'
 call plug#end()
 
 " colors
-colo seoul256
+colorscheme gruvbox
 " line nums
 :set number
 :set tw=120
@@ -53,4 +53,4 @@ filetype plugin on
 syntax on
 
 "copy/paste
-v
+vnoremap <C-c> "*y
